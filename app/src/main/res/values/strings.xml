@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LookUp</string>
+    <string name="app_description">Gentle reminders to look at your child</string>
+    <string name="start_watching">Start Watching</string>
+    <string name="stop_watching">Stop Watching</string>
+    <string name="nudge_interval">Nudge every: %1$d seconds</string>
+    <string name="overlay_permission_required">Overlay permission is required for the app to work properly</string>
+    <string name="glanceup_started">LookUp started!</string>
+    <string name="glanceup_stopped">LookUp stopped</string>
+    <string name="overlay_nudge_text">👀 Look Up!</string>
+    <string name="feature_description">Uses a subtle overlay that appears at the top of screen and auto-dismisses</string>
+</resources>

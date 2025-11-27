@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/glanceup_surface"
+    android:padding="32dp"
+    tools:context=".MainActivity">
+
+    <!-- Header Section -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/card_view">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="👀 LookUp"
+            android:textSize="42sp"
+            android:textStyle="bold"
+            android:textColor="@color/glanceup_primary"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/app_description"
+            android:textSize="18sp"
+            android:textColor="@color/on_surface_variant"
+            android:gravity="center"
+            android:layout_marginBottom="48dp"
+            android:lineSpacingExtra="4sp" />
+
+    </LinearLayout>
+
+    <!-- Main Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@color/glanceup_card"
+        app:layout_constraintBottom_toTopOf="@+id/feature_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_layout"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="32dp">
+
+            <!-- Interval Display -->
+            <TextView
+                android:id="@+id/tvInterval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nudge_interval"
+                android:textSize="20sp"
+                android:textColor="@color/on_surface"
+                android:gravity="center"
+                android:layout_marginBottom="24dp"
+                android:textStyle="500" />
+
+            <!-- Interval Slider -->
+            <com.google.android.material.slider.Slider
+                android:id="@+id/intervalSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:valueFrom="5.0"
+                android:valueTo="30.0"
+                android:value="10.0"
+                android:stepSize="1.0"
+                android:layout_marginBottom="32dp"
+                app:trackColorInactive="@color/surface_variant"
+                app:trackColorActive="@color/glanceup_primary"
+                app:thumbColor="@color/glanceup_primary"
+                app:haloColor="@color/primary_container" />
+
+            <!-- Action Buttons -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStart"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/start_watching"
+                android:textSize="18sp"
+                android:textStyle="600"
+                style="@style/Button.LookUp.Filled"
+                android:layout_marginBottom="12dp"
+                app:icon="@android:drawable/ic_media_play"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                app:cornerRadius="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStop"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/stop_watching"
+                android:textSize="18sp"
+                android:textStyle="600"
+                android:backgroundTint="@color/error"
+                android:textColor="@color/on_error"
+                android:layout_marginBottom="8dp"
+                app:icon="@android:drawable/ic_media_pause"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                app:cornerRadius="16dp"
+                android:enabled="false" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Feature Description -->
+    <TextView
+        android:id="@+id/feature_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/feature_description"
+        android:textSize="14sp"
+        android:textColor="@color/on_surface_variant"
+        android:gravity="center"
+        android:lineSpacingExtra="2sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

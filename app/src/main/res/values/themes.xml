@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.LookUp" parent="Theme.Material3.DayNight">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="colorPrimaryContainer">@color/primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/on_primary_container</item>
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorOnSecondary">@color/on_secondary</item>
+        <item name="colorSecondaryContainer">@color/secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/on_secondary_container</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/on_surface</item>
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/on_surface_variant</item>
+        <item name="colorBackground">@color/background</item>
+        <item name="colorOnBackground">@color/on_background</item>
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/on_error</item>
+        
+        <!-- Round corners for all components -->
+        <item name="shapeCornerSmall">8dp</item>
+        <item name="shapeCornerMedium">12dp</item>
+        <item name="shapeCornerLarge">16dp</item>
+        
+        <!-- Typography -->
+        <item name="textAppearanceTitleLarge">@style/TextAppearance.LookUp.TitleLarge</item>
+    </style>
+
+    <style name="Theme.LookUp" parent="Base.Theme.LookUp" />
+
+    <!-- Custom text appearances -->
+    <style name="TextAppearance.LookUp.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="fontFamily">sans-serif-medium</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!-- Button styles -->
+    <style name="Button.LookUp.Filled" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/glanceup_primary</item>
+        <item name="android:textColor">@color/on_primary</item>
+        <item name="cornerRadius">28dp</item>
+    </style>
+</resources>
